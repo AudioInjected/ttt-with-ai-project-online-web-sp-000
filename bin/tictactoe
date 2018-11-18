@@ -28,7 +28,7 @@ elsif players == "1"
        board.display
        game.play
     end
-  elsif player == "2"
+  elsif players == "2"
     puts "Who would you like to go first? player1: player2:"
     first = gets.strip
     if first == "player1"
