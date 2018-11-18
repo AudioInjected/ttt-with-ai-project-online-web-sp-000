@@ -11,6 +11,10 @@ module Players
          "7"
       elsif !board.taken?("9")
          "9"
+      elsif !board.taken?("4")
+        "4"
+      elsif !board.taken?("6")
+        "6"
       else
         "#{rand(1..9)}"
       end
