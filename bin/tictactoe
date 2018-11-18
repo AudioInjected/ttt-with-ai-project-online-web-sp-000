@@ -6,7 +6,7 @@ puts "Welcome to Tic Tac Toe"
 puts "How many players? Enter 0: 1: or 2: or q: to quit"
 puts "You can also type wargames :)"
 players = gets.strip
-until players == "0" || players == "1" || players == "2" || players == "q" || players = "wargames"
+until players == "0" || players == "1" || players == "2" || players == "q" || players == "wargames"
   puts "Please enter 0: 1: or 2: If you would like to quit, type q"
   players = gets.strip
 end
@@ -45,7 +45,7 @@ elsif players == "1"
     puts "Player 1: Start"
       board.display
       game.play
-   elsif players = "wargames"
+   elsif players == "wargames"
      board = Board.new
      player_1 = Players::Computer.new("X")
      player_2 = Players::Computer.new("O")
