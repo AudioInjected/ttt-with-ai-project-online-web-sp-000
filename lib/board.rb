@@ -48,7 +48,6 @@ class Board
   end
 
   def update(input, player)
-    #binding.pry
     index = input.to_i
     index -= 1
     self.cells[index] = player.token
