@@ -36,4 +36,5 @@ elsif players == "1"
     puts "Player 1: Start"
       board.display
       game.play
+    end
   end
