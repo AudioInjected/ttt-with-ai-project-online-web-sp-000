@@ -44,5 +44,5 @@ elsif players == "1"
        game = Game.new(player_1, player_2, board)
          board.display
          game.play
-  end
+#  end
 end
