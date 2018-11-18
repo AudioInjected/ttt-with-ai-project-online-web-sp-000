@@ -22,13 +22,13 @@ elsif players == "1"
     puts "Please enter yes: no: or type q: if you want to quit"
     first = gets.strip.downcase
   end
-  if first == "yes"
+  if first[0] == "y"
     board = Board.new
     player_1 = Players::Computer.new("X")
     player_2 = Players::Human.new("O")
     game = Game.new(player_1, player_2, board)
       game.play
-   elsif first == "no"
+   elsif first[0] == "n"
      board = Board.new
      player_1 = Players::Human.new("X")
      player_2 = Players::Computer.new("O")
