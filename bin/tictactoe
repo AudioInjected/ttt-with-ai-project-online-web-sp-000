@@ -5,7 +5,7 @@ require_relative '../config/environment'
 puts "Welcome to Tic Tac Toe"
 puts "How many players? Enter 0: 1: or 2:"
 players = gets.strip
-until players == "0" || players == "1" || players == "2" || players = "q"
+until players == "0" || players == "1" || players == "2" || players == "q"
   puts "Please enter 0: 1: or 2: If you would like to quit, type q"
   players = gets.strip
 end
