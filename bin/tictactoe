@@ -45,4 +45,28 @@ elsif players == "1"
     puts "Player 1: Start"
       board.display
       game.play
+   elsif players = "wargames"
+     board = Board.new
+     player_1 = Players::Computer.new("X")
+     player_2 = Players::Computer.new("O")
+     game = Game.new(player_1, player_2, board)
+     x, o, draw = 0, 0, 0
+     until x + o + draw == 100 do
+       game.play
+       if game.over?
+         if game.winner == "X"
+           x += 1
+           board.reset!
+         elsif game.winner == "O"
+           o += 1 
+           board.reset!
+         else 
+           draw += 1
+           board.reset!
+         end   
+       end
+     end
+     puts "X has won #{x} times!"
+     puts "O has won #{o} times!"
+     puts "There have been #{draw} draw(s)!"
   end
