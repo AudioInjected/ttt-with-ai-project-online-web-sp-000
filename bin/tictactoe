@@ -17,10 +17,10 @@ if players == "0"
     game.play
 elsif players == "1"
   puts "Who would you like the cpu to go first? yes: no:"
-  first = gets.strip
-  until first == "yes" || first == "no" || first == "q"
+  first = gets.strip.downcase[0]
+  until first == "y" || first == "n" || first == "q"
     puts "Please enter yes: no: or type q: if you want to quit"
-    first = gets.strip.downcase
+    first = gets.strip.downcase[0]
   end
   if first == "yes"
     board = Board.new
