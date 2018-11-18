@@ -29,21 +29,11 @@ elsif players == "1"
        game.play
     end
   elsif players == "2"
-    puts "Who would you like to go first? player1: player2:"
-    first = gets.strip
-    if first == "player1"
-      board = Board.new
-      player_1 = Players::Human.new("X")
-      player_2 = Players::Human.new("O")
-      game = Game.new(player_1, player_2, board)
-        board.display
-        game.play
-     elsif first == "player2"
-       board = Board.new
-       player_1 = Players::Human.new("O")
-       player_2 = Players::Computer.new("X")
-       game = Game.new(player_1, player_2, board)
-       board.display
-       game.play
-      end
+    board = Board.new
+    player_1 = Players::Human.new("X")
+    player_2 = Players::Human.new("O")
+    game = Game.new(player_1, player_2, board)
+    puts "Player 1: Start"
+      board.display
+      game.play
   end
