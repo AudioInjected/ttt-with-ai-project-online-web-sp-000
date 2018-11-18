@@ -12,4 +12,20 @@ if players == "0"
   player_2 = Players::Computer.new("O")
   game = Game.new(player_1, player_2, board)
     game.play
+elsif players == "1"
+  puts "Who would you like the cpu to go first? yes: no:"
+  first = gets.strip
+  if first == "yes"
+    board = Board.new
+    player_1 = Players::Computer.new("X")
+    player_2 = Players::Human.new("O")
+    game = Game.new(player_1, player_2, board)
+      game.play
+   elsif first == "no"
+     board = Board.new
+     player_1 = Players::Human.new("X")
+     player_2 = Players::Computer.new("O")
+     game = Game.new(player_1, player_2, board)
+       game.play
+  end
 end
