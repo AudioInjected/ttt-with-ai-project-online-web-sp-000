@@ -62,21 +62,4 @@ class Game
      puts "Cat's Game!"
    end
  end
-=begin
- def start
-   puts "Welcome to Tic Tac Toe"
-   puts "How many players? Enter 0: 1: or 2:"
-   players = gets.strip
-   if players == "0"
-     board = Board.new
-     player_1 = Players::Computer.new("X")
-     player_2 = Players::Computer.new("O")
-     game = Game.new(player_1, player_2, board)
-     until over?
-       player_1.move
-       player_2.move
-     end
-   end
- end
-=end
 end
