@@ -17,7 +17,11 @@ if players == "0"
     game.play
 elsif players == "1"
   puts "Who would you like the cpu to go first? yes: no:"
-  first = gets.strip
+  first = gets.slice(0).downCase
+  until first == "y" || first == "n" || first == "q"
+    puts "Please enter yes: no: or type q: if you want to quit"
+    first = gets.slice(0).downCase
+  end
   if first == "yes"
     board = Board.new
     player_1 = Players::Computer.new("X")
