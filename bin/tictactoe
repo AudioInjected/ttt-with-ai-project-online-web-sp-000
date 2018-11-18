@@ -20,7 +20,7 @@ elsif players == "1"
   first = gets.strip
   until first == "yes" || first == "no" || first == "q"
     puts "Please enter yes: no: or type q: if you want to quit"
-    first = gets.strip
+    first = gets.strip.downcase
   end
   if first == "yes"
     board = Board.new
